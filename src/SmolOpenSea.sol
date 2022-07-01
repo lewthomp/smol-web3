@@ -2,13 +2,17 @@
 
 pragma solidity ^0.8.15;
 
-// import 
+import { ERC721 } from "solmate/tokens/ERC721.sol";
 
-contract MockNFT {
+contract MockNFT is ERC721 {
     uint256 public tokenId = 0;
+    string public baseURI = "test uri base";
 
-    function tokenURI(uint256) public pure override returns (string memory) {
-        string uri = "test uri";
+    constructor() ERC721('MockNFT', 'MOCK') {}
+
+    function tokenURI(uint256 _tokenId) public pure override returns (string memory) {
+        
+
     }
 
 
