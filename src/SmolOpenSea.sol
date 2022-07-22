@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.15;
 
-import { ERC721 } from "solmate/tokens/ERC721.sol";
+import {ERC721} from "solmate/tokens/ERC721.sol";
 
 contract MockNFT is ERC721('MockNFT', 'MOCK') {
     uint256 public supply = 1;
